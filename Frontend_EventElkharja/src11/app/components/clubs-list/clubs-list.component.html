@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h2>Manage <b>Clubs</b></h2>
+                    </div>
+                    <div class="col-xs-6 bat">
+                        <a class="btn" routerLink="/addclub"><i class="material-icons" data-toggle="tooltip" title="Add">&#xE147;</i> <span>Add New Club</span></a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Creator</th>
+                        <th>Location</th>
+                        <th>Image</th>
+                        <th>Members</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let club of clubs">
+                        <td>{{ club.title }}</td>
+                        <td>{{ club.description }}</td>
+                        <td>{{ club.category }}</td>
+                        <td>{{ club.creator }}</td>
+                        <td>{{ club.location }}</td>
+                        <td><img src="{{ club.image }}" width="80px" alt="Image"></td>
+                        <td>{{ club.members }}</td>
+                        <td>
+                            <a (click)="club.id && updateClub(club.id)" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a (click)="club.id && deleteClub(club.id)" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

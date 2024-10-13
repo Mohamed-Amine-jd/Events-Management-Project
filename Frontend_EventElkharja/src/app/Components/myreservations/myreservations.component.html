@@ -1,0 +1,42 @@
+<app-home-header></app-home-header>
+<div class="container">
+    <h2 style="color: #ff9500; font-family: 'Arial Black', sans-serif;">My Reservations</h2>
+    <table class="table table-striped table-container">
+        <thead class="thead-dark">
+            <tr>
+                <th>Event Name</th>
+                <th>Total price</th>
+                <th>Places</th>
+                <th>DateOfRes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="Reservations.length === 0">
+                <tr>
+                    <td colspan="4">
+                        <p style="color: red;">Tu n'as publié aucune annonce. 
+                            Si tu veux en ajouter maintenant, clique ici. 
+                        </p>
+                    </td>
+                    <td>
+                        <button class="button" class="btn btn-success"><a routerLink="/home" style="text-decoration: none; color: black;">Reser Now</a></button>
+                    </td>
+                </tr>
+                
+            </ng-container>
+            <tr *ngFor="let reservation of Reservations">
+                <td class="ttdd">{{ reservation?.titlereserv }}</td>
+                <td class="ttdd">{{ reservation?.price }}Dt</td>
+                <td class="ttdd">{{ reservation?.nbrPerson }}</td>
+                <td class="ttdd">{{ reservation?.dateReser | date }}</td>
+                <td class="ttdd" >
+                    <button class="button" class="btn btn-danger" (click)="Delete(reservation?.idReservation || 0)">Cancel Reserve</button>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+

@@ -1,0 +1,87 @@
+
+<app-home-header></app-home-header><br><br><br><br><br>
+<div class="contact-us section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-us-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <div id="map">
+                    
+                  <img src="../../../assets/image.png" width="100%" height="670px" frameborder="0" style="border:0; border-radius: 23px;" >
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <form #contactForm="ngForm" id="contact-form" (ngSubmit)="AjouterMessage(contactForm)">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="section-heading">
+                        <h2><em>Contact Us</em> &amp; Get In <span>Touch</span></h2>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="text" ngModel id="firstName" name="firstName"  placeholder="Your First Name..." autocomplete="on" class="form-control" required>
+             
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="text" ngModel id="lastName" name="lastName" class="form-control" placeholder="Your Last Name..." autocomplete="on" required>
+                    </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="email" class="form-control"  pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." ngModel name="email" id="email" required>
+		
+                      </fieldset>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="subject" name="subject" ngModel id="subject" placeholder="Subject..." autocomplete="on" >
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <textarea name="message" id="message" ngModel placeholder="Your Message"></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+                <div class="more-info">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="info-item">
+                        <i class="fa fa-phone"></i>
+                        <h4><a href="#">+216 50541056</a></h4>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-item">
+                        <i class="fa fa-envelope"></i>
+                        <h4><a href="#">info@Elkharja.com</a></h4>
+                        <h4><a href="#">hello@Elkharja.com</a></h4>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-item">
+                        <i class="fa fa-map-marker"></i>
+                        <h4><a href="#">Bizerte , Tunis ,Sousse</a></h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

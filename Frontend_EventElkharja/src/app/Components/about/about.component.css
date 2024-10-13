@@ -1,0 +1,97 @@
+
+.infos {
+    background-image: url(../../../assets/images/infos-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 120px 0px;
+    margin-top: 90px;
+  }
+  
+  .infos .main-content {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 23px;
+  }
+  
+  .infos .main-content .left-image {
+    background-image: url(../../../assets/images/left-infos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .infos .main-content .left-image img {
+    display: none;
+  }
+  
+  .infos .main-content .section-heading {
+    padding: 60px 60px 30px 60px;
+  }
+  
+  .infos .main-content .skills {
+    padding: 0px 60px;
+  }
+  
+  .infos .main-content .skill-slide {
+    position: relative;
+    width: 100%;
+    background-color: #f9ebff;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 60px;
+  }
+  
+  .infos .main-content .skill-slide .fill {
+    height: 10px;
+    background-color: #5b03e4;
+    border-radius: 5px;
+  }
+  
+  .infos .main-content .skill-slide h6 {
+    position: absolute;
+    color: #5b03e4;
+    font-size: 15px;
+    left: 0;
+    top: -25px;
+  }
+  
+  .infos .main-content .skill-slide span {
+    position: absolute;
+    color: #5b03e4;
+    font-size: 15px;
+    font-weight: 700;
+    top: -25px;
+  }
+  
+  .infos .main-content .marketing .fill {
+    width: 90%;
+  }
+  
+  .infos .main-content .digital .fill {
+    width: 80%;
+  }
+  
+  .infos .main-content .media .fill {
+    width: 95%;
+  }
+  
+  .infos .main-content .marketing span {
+    right: 10%;
+  }
+  
+  .infos .main-content .digital span {
+    right: 20%;
+  }
+  
+  .infos .main-content .media span {
+    right: 5%;
+  }
+  
+  .infos .main-content p.more-info {
+    margin-top: -15px;
+    padding: 0px 60px 60px 60px;
+  }
+  

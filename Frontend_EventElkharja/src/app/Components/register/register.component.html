@@ -1,0 +1,71 @@
+
+<app-home-header></app-home-header>
+<br><br><br><br><br>
+<div class="contact-us section" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="contact-us-content">
+          <div class="row">
+           
+            <div class="col-lg-8">
+              <form [formGroup]="addForm" id="contact-form" (ngSubmit)="ajouterutilisateur()" class="rounded p-4 shadow">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="section-heading">
+                      <h2><em>Sign Up</em></h2>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <input formControlName="firstName" type="text" class="form-control" id="firstName" autocomplete="given-name" placeholder="First Name">
+                      <small class="text-danger" *ngIf="addForm.get('firstName')?.invalid && (addForm.get('firstName')?.dirty || addForm.get('firstName')?.touched)">
+                        <div *ngIf="addForm.get('firstName')?.errors?.['required']">Le nom complet est requis</div>
+                        <div *ngIf="addForm.get('firstName')?.errors?.['pattern']">La première lettre doit être majuscule</div>
+                      </small>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                      <fieldset>
+                          <input formControlName="lastName" type="text" class="form-control" id="lastName" autocomplete="family-name" placeholder="Last Name">
+                          <small class="text-danger" *ngIf="addForm.get('lastName')?.invalid && (addForm.get('lastName')?.dirty || addForm.get('lastName')?.touched)">
+                            <div *ngIf="addForm.get('lastName')?.errors?.['required']">Le lastName complet est requis</div>
+                            <div *ngIf="addForm.get('lastName')?.errors?.['pattern']">La première lettre doit être majuscule</div>
+                          </small>
+                      </fieldset>
+                    </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <input formControlName="email" type="text" class="form-control" id="email" autocomplete="email" placeholder="Email">
+                      <small class="text-danger" *ngIf="addForm.get('email')?.invalid && (addForm.get('email')?.dirty || addForm.get('email')?.touched)">
+                        <div *ngIf="addForm.get('email')?.errors?.['required']">L'adresse est requise</div>
+                      </small>    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <input formControlName="password" type="password" class="form-control" id="password" autocomplete="current-password" placeholder="Password">
+                      <small class="text-danger" *ngIf="addForm.get('password')?.invalid && (addForm.get('password')?.dirty || addForm.get('password')?.touched)">
+                        <div *ngIf="addForm.get('password')?.errors?.['required']">Le mot de passe est requis</div>
+                      </small>
+                    </fieldset>
+                  </div>
+                  
+               
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="orange-button" style="margin-bottom: 13px;">Sign up</button>
+                    </fieldset>
+                  </div>
+                  <div class="hint-text">Already have an account? <a routerLink="/login" class="fw-bold">Login</a></div>
+
+                </div>
+              </form>
+              <div class="more-info">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

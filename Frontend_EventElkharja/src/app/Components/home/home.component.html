@@ -1,0 +1,113 @@
+<app-home-header></app-home-header>
+
+<br><br><br><br>
+<div class="main-banner" id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="caption header-text">
+          <h6>El-KHARJA EVENT</h6>
+          <div class="line-dec"></div>
+          <h4>Dive <em>Into a world  </em> of exciting experiences <span>With K-E</span></h4>
+          <p>ELKHARJA provides enriching experiences through various events, including workshops and seminars. Founded by MED AMINE JD .</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="services section" id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-6">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading">
+              <h2>We Provide <em style=" font-style: normal; color: #5b03e4;">Different Services</em> &amp;
+                <span style=" color: #c03afe;">Features</span> For You</h2>
+                <div class="line-dec"></div>
+                <p>Experience the vibrant world of events with E-K: Dive into the SEO world and beyond with El Kharja Event.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <div class="service-item">
+              <div class="icon">
+                <img src="assets/images/services-01.jpg" alt="discover SEO" class="templatemo-feature">
+              </div>
+              <h4>Discover More info</h4>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <div class="service-item">
+              <div class="icon">
+                <img src="assets/images/services-02.jpg" alt="data analysis" class="templatemo-feature">
+              </div>
+              <h4>Connect and celebrate</h4>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <div class="service-item">
+              <div class="icon">
+                <img src="assets/images/services-03.jpg" alt="precise data" class="templatemo-feature">
+              </div>
+              <h4>Unlock boundless entertainment</h4>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <div class="service-item">
+              <div class="icon">
+                <img src="assets/images/services-04.jpg" alt="SEO marketing" class="templatemo-feature">
+              </div>
+              <h4>Social Media &amp; El-Kharja Event</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<p style="text-align: center; font-size: 55px; font-family:serif; color: #262626;">Tour Destination</p>
+<br><br>
+<div class="container">
+  <div class="dropdown-container">
+    <li class="dropdown">
+      <a href="#" class="aa"><span> Catégories</span></a>
+      <ul>
+        <li><a (click)="searchCategory('Workshops')">Workshops</a></li>
+        <li><a (click)="searchCategory('Tripe')">Tripe</a></li>
+        <li><a (click)="searchCategory('Festival')">Festival</a></li>
+        <li><a (click)="showAllProducts()">All</a></li>
+      </ul>
+    </li>
+
+    <form class="form-inline">
+      <input
+        type="search"
+        (ngModelChange)="SearchEvents(key.value)"
+        #key="ngModel"
+        ngModel
+        name="key"
+        id="searchName"
+        placeholder="Search Event..."
+        required
+      >
+    </form>
+  </div>
+</div>
+<br><br>
+<div class="containerr">
+  <div class="rowCard">
+    <div *ngFor="let event of events" class="cardDestination">
+      <div class="box_main">
+        <h4 class="shirt_text">{{event.title}}</h4>
+        <p class="price_text">Prix <span style="color: #262626;">{{ event.price}} D</span></p>
+        <img [src]="prendrenomFile(event.image)" alt="{{ event.image }}">
+        <div class="btn_main">
+          <div class="seemore_bt"><button class="btn btn-lg" (click)="reserver(event)" style="background-color: #faebff;"><Details></Details></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

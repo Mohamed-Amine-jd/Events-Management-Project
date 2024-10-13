@@ -1,0 +1,84 @@
+<app-home-admin></app-home-admin> <br> <br>
+
+<div class="contact-us section" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="contact-us-content">
+          <div class="row">
+            <div class="col-lg-4">
+              <div id="map">
+                <img src="../../../assets/add.png" width="100%" height="670px" frameborder="0" style="border:0; border-radius: 23px;">
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <form #donnee="ngForm" id="contact-form" (ngSubmit)="addEvent(donnee)">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="section-heading">
+                      <h2><em>Add</em> & Events <span>Now</span></h2>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input type="text" ngModel id="title" name="title" placeholder="title of event..." autocomplete="on" class="form-control" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input type="text" ngModel id="place" name="place" class="form-control" placeholder="Event place..." autocomplete="on" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input type="text" class="form-control" placeholder="Price of event..." ngModel name="price" id="price" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input type="date" name="startdate" ngModel id="startdate" placeholder="startdate..." autocomplete="on">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input type="text" name="capacity" ngModel id="capacity" placeholder="capacity..." autocomplete="on">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input type="file" name="image" ngModel id="image" placeholder="image..." autocomplete="on">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <div class="form-group">
+                        <label for="categorie">Catégorie :</label>
+                        <select id="categorie" ngModel name="categorie" class="form-control" required>
+                          <option value="Tripe">Tripe</option>
+                          <option value="Festival">Festival</option>
+                          <option value="Workshops">Workshops</option>
+                        </select>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="description" id="description" ngModel placeholder="Your description"></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="orange-button">Add Event Now</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+              <div class="more-info">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

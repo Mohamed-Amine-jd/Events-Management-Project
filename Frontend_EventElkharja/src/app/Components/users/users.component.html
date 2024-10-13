@@ -1,0 +1,182 @@
+<app-home-admin></app-home-admin>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+body {
+    color: #566787;
+    background: #f7f5f2;
+    font-family: 'Roboto', sans-serif;
+}
+.table-responsive {
+    margin: 30px 0;
+}
+.table-wrapper {
+
+    width: 90%;
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.table-title {
+    color: #fff;
+    background: #e9a23e;	
+    padding: 16px 25px;
+    margin: -20px -25px 10px;
+    border-radius: 3px 3px 0 0;
+}
+.table-title h2 {
+    margin: 5px 0 0;
+    font-size: 24px;
+    color: #ddd;
+}
+.search-box {
+    position: relative;
+    float: right;
+  
+}
+.search-box .input-group {
+    min-width: 300px;
+    position: absolute;
+    right: 0;
+}
+.search-box .input-group-addon, .search-box input {
+    border-color: #ddd;
+    border-radius: 0;
+}	
+.search-box input {
+    height: 34px;
+    padding-right: 35px;
+    background: #f4fcfd;
+    border: none;
+    border-radius: 2px !important;
+}
+.search-box input:focus {
+    background: #fff;
+}
+.search-box input::placeholder {
+    font-style: italic;
+}
+.search-box .input-group-addon {
+    min-width: 35px;
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+    padding: 6px 0;
+}
+.search-box i {
+    color: #a0a5b1;
+    font-size: 19px;
+    position: relative;
+    top: 2px;
+}
+table.table {
+    table-layout: fixed;
+    margin-top: 15px;
+
+}
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.table th:first-child {
+    width: 60px;
+}
+table.table th:last-child {
+    width: 120px;
+}
+table.table td a {
+    color: #a0a5b1;
+    display: inline-block;
+    margin: 0 5px;
+}
+table.table td a.view {
+    color: #03A9F4;
+}
+table.table td a.edit {
+    color: #FFC107;
+}
+table.table td a.delete {
+    color: #E34724;
+}
+table.table td i {
+    font-size: 19px;
+}    
+</style>
+
+
+<body>
+    <div class="container-lg">
+        <div class="table-responsive">
+            <div class="table-wrapper">			
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2 style="margin-right:200px;">Customer <b>Details</b></h2>
+                        </div>
+                       
+                        
+                        <div class="col-sm-6">
+                            <div class="search-box">
+                                <div class="input-group">
+                                    <form >							
+                                    <input type="search" id="search" class="form-control" placeholder="Search by Name" (ngModelChange)="SearchUser(key.value)" #key="ngModel" ngModel
+                                    name="key" style="margin-left:40px;">
+                                    
+                                </form>	
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+               
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                         <th>#</th>
+                            <th style="width: 22%;">FirstName</th>
+                            <th style="width: 22%;">LastName</th>
+                            
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+ 
+                        <tr *ngFor="let user of users">
+                        
+                          <td>*</td>
+                            <td >{{ user.firstName }}</td>
+                             <td >{{ user.lastName }}</td>
+                         
+                               <td >{{ user.email }}</td>
+                            <td>
+                                <i *ngIf="user.firstName=='Admin'" class="fa fa-check-circle"></i>
+                                <i *ngIf="user.firstName!='Admin'" class="fa fa-trash" (click)="deleteuser(user)"></i>
+                              
+                            </td>       
+                        </tr>
+                             
+                    </tbody>
+                </table>
+            </div>
+        </div>        
+    </div>     
+</body>
+
+
+  
+  

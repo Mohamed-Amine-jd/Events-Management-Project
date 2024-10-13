@@ -1,0 +1,101 @@
+.infos {
+  background-color: #6000faad;
+  padding: 120px 0px;
+  margin-top: 90px;
+}
+
+.infos .main-content {
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 23px;
+}
+
+.infos .main-content .section-heading {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.infos .main-content .skills {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.not {
+  margin-left: 30px;
+}
+
+input {
+  width: 100%;
+  height: 46px;
+  border-radius: 23px;
+  background-color: #f9ebff;
+  border: none;
+  outline: none;
+  padding: 0px 15px;
+  font-size: 14px;
+  color: #2a2a2a;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #1f4bda;
+}
+
+.img-responsive {
+  width: 100%; /* Adjust width to container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent overflow */
+  border-radius: 25px; /* Example of styling */
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust the gap to set the separation */
+  margin-right: 20px; /* Add margin to the right */
+  padding: 10px;
+}
+
+.custom-btn {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: all 0.75s cubic-bezier(0.25, 0.8, 0.5, 1);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.custom-btn:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.custom-btn:hover {
+  transform: translateY(-2px);
+  background-color: #5cb85c; /* Change the color slightly for hover effect */
+}
+
+.custom-btn.btn-warning:hover {
+  background-color: #f0ad4e; /* Change the color slightly for hover effect */
+}
+
+.custom-btn span {
+  position: relative;
+  z-index: 1;
+}
